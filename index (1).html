@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+  function handleSubmit(event) {
+    event.preventDefault(); // Stop real form submission
+    
+    const username = document.querySelector('input[name="username"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+    
+    // Simulate a phishing alert message
+    alert("We’ve detected suspicious activity on your account.\nPlease wait while we verify your credentials...");
+    
+    // Show another alert with 'captured' data for educational demo
+    alert("Phishing Data Captured:\nUsername: " + username + "\nPassword: " + password);
+    
+    // Simulate redirect to Instagram help page (or fake page)
+    window.location.href = "https://help.instagram.com/";
+  }
+</script>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram Logo" class="logo">
+        <h2>Login to Instagram</h2>
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Username or Email" name="username" required><br>
+            <input type="password" placeholder="Password" name="password" required><br>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Forgot your password? <a href="#">Click here</a></p>
+    </div>
+</body>
+</html>
